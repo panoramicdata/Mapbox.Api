@@ -26,7 +26,7 @@ namespace Mapbox.Api
 		{
 			_logger = logger ?? NullLogger.Instance;
 			_httpClientHandler = new AuthenticatedBackingOffHttpClientHandler(options ?? throw new ArgumentNullException(nameof(options)), _logger);
-			_httpClient = new HttpClient(_httpClientHandler) { BaseAddress = new Uri($"https://api.mapbox.com/") };
+			_httpClient = new HttpClient(_httpClientHandler) { BaseAddress = new Uri("https://api.mapbox.com/") };
 
 			var refitSettings = new RefitSettings
 			{
@@ -46,7 +46,7 @@ namespace Mapbox.Api
 		public IGeocoding Geocoding { get; }
 
 		#region IDisposable Support
-		private bool _disposedValue = false; // To detect redundant calls
+		private bool _disposedValue;
 
 		protected virtual void Dispose(bool disposing)
 		{

@@ -51,6 +51,6 @@ namespace Mapbox.Api.Test
 		}
 
 		protected MapboxClient MapboxClient
-			=> _mapboxClient ?? (_mapboxClient = new MapboxClient(Configuration.MapboxClientOptions, Logger));
+			=> _mapboxClient ??= new MapboxClient(Configuration.MapboxClientOptions, Logger);
 	}
 }
