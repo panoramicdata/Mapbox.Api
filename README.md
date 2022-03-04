@@ -1,5 +1,7 @@
 # Mapbox.Api
 
+[![Nuget](https://img.shields.io/nuget/v/Mapbox.Api)](https://www.nuget.org/packages/Mapbox.Api/)
+
 To use the Mapbox API nuget package:
 
 ## Visual Studio
