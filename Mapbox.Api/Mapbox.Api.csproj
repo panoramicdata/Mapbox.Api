@@ -38,7 +38,7 @@
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
 		<PackageReference Include="refit" Version="6.1.15" />
 		<PackageReference Include="Refit.Newtonsoft.Json" Version="6.1.15" />
 		<PackageReference Include="SecurityCodeScan.VS2019" Version="5.2.1">
