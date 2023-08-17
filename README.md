@@ -43,4 +43,4 @@ namespace My.Project
 
 The Mapbox API documentation can be found here:
 
-  - [Mapbox API Documentation](https://docs.mapbox.com/api)
+-	[Mapbox API Documentation](https://docs.mapbox.com/api)
