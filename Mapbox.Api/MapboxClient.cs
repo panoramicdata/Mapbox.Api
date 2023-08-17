@@ -22,7 +22,10 @@ namespace Mapbox.Api
 		/// </summary>
 		/// <param name="options"></param>
 		/// <param name="logger"></param>
-		public MapboxClient(MapboxClientOptions options, ILogger? logger = default)
+
+		public MapboxClient(MapboxClientOptions options) : this(options, default) { }
+
+		public MapboxClient(MapboxClientOptions options, ILogger? logger)
 		{
 			_logger = logger ?? NullLogger.Instance;
 			_httpClientHandler = new AuthenticatedBackingOffHttpClientHandler(options ?? throw new ArgumentNullException(nameof(options)), _logger);
