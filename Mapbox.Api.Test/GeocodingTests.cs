@@ -3,6 +3,7 @@ using Mapbox.Api.Data;
 using System.Collections.Generic;
 using Xunit;
 using Xunit.Abstractions;
+using System.Threading.Tasks;
 
 namespace Mapbox.Api.Test
 {
@@ -13,7 +14,7 @@ namespace Mapbox.Api.Test
 		}
 
 		[Fact]
-		public async void GetAllAsync_Succeeds()
+		public async Task GetAllAsync_Succeeds()
 		{
 			var geocoding = await MapboxClient
 				.Geocoding

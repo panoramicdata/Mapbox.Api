@@ -10,7 +10,7 @@ To use the Mapbox API nuget package:
 2.  Right-click on the project and click "Manage Nuget packages"
 3.  Find the package "Mapbox.Api" - install the latest version
 
-## Example code (C# 8.0):
+## Example code (C# 8.0)
 
 ``` C#
 using Mapbox.Api;
@@ -43,4 +43,4 @@ namespace My.Project
 
 The Mapbox API documentation can be found here:
 
-- [Mapbox API Documentation](https://docs.mapbox.com/api)
+  - [Mapbox API Documentation](https://docs.mapbox.com/api)
