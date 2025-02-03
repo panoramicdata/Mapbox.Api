@@ -6,8 +6,8 @@
 		<Nullable>enable</Nullable>
 		<PackageIcon>Icon.png</PackageIcon>
 		<Copyright>Panoramic Data Limited 2021</Copyright>
-		<PackageProjectUrl>https://github.com/panoramicdata/Meraki.Api</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/panoramicdata/Meraki.Api</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/panoramicdata/Mapbox.Api</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/panoramicdata/Mapbox.Api</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>Meraki API</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
