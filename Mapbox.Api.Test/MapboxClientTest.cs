@@ -1,6 +1,6 @@
-﻿using Divergic.Logging.Xunit;
-using Mapbox.Api.Exceptions;
+﻿using Mapbox.Api.Exceptions;
 using Mapbox.Api.Test.Config;
+using Neovolve.Logging.Xunit;
 using Newtonsoft.Json;
 using System.IO;
 using Xunit.Abstractions;
