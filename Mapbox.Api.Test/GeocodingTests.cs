@@ -1,6 +1,5 @@
-using FluentAssertions;
+using AwesomeAssertions;
 using Mapbox.Api.Data;
-using System.Collections.Generic;
 using Xunit;
 using Xunit.Abstractions;
 
