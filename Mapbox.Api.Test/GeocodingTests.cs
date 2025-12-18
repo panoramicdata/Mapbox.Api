@@ -1,26 +1,20 @@
 using AwesomeAssertions;
 using Mapbox.Api.Data;
+using System.Threading.Tasks;
 using Xunit;
 using Xunit.Abstractions;
-using System.Threading.Tasks;
 
-namespace Mapbox.Api.Test
+namespace Mapbox.Api.Test;
+
+public class GeocodingTests(ITestOutputHelper iTestOutputHelper) : MapboxClientTest(iTestOutputHelper)
 {
-	public class GeocodingTests : MapboxClientTest
+	[Fact]
+	public async Task GetAllAsync_Succeeds()
 	{
-		public GeocodingTests(ITestOutputHelper iTestOutputHelper) : base(iTestOutputHelper)
-		{
-		}
-
-		[Fact]
-		public async Task GetAllAsync_Succeeds()
-		{
-			var geocoding = await MapboxClient
-				.Geocoding
-				.GetForwardsAsync("Greenwich Observatory, Greenwich, London")
-				.ConfigureAwait(false);
-			geocoding.Should().BeOfType<Geocoding>();
-			geocoding.Should().NotBeNull();
-		}
+		var geocoding = await MapboxClient
+			.Geocoding
+			.GetForwardsAsync("Greenwich Observatory, Greenwich, London");
+		geocoding.Should().BeOfType<Geocoding>();
+		geocoding.Should().NotBeNull();
 	}
 }

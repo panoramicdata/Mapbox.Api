@@ -350,3 +350,6 @@ MigrationBackup/
 .ionide/
 
 /Mapbox.Api.Test/appsettings.json
+
+#Ignore vscode AI rules
+.github\instructions\codacy.instructions.md
