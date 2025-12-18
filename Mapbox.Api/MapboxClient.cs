@@ -57,10 +57,8 @@ public class MapboxClient : IDisposable
 		{
 			if (disposing)
 			{
-				_logger.LogDebug(Resources.Disposing);
 				_httpClient.Dispose();
 				_httpClientHandler.Dispose();
-				_logger.LogDebug(Resources.Disposed);
 			}
 
 			_disposedValue = true;
