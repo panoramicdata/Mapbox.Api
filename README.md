@@ -1,6 +1,7 @@
 # Mapbox.Api
 
 [![Nuget](https://img.shields.io/nuget/v/Mapbox.Api)](https://www.nuget.org/packages/Mapbox.Api/)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/d3b9e33de5f2461cabe69723352223ed)](https://app.codacy.com/gh/panoramicdata/Mapbox.Api/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 To use the Mapbox API nuget package:
 

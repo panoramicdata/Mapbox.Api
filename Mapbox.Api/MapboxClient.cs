@@ -13,7 +13,6 @@ namespace Mapbox.Api;
 /// </summary>
 public class MapboxClient : IDisposable
 {
-	private readonly ILogger _logger;
 	private readonly HttpClient _httpClient;
 	private readonly AuthenticatedBackingOffHttpClientHandler _httpClientHandler;
 
@@ -27,8 +26,8 @@ public class MapboxClient : IDisposable
 
 	public MapboxClient(MapboxClientOptions options, ILogger? logger)
 	{
-		_logger = logger ?? NullLogger.Instance;
-		_httpClientHandler = new AuthenticatedBackingOffHttpClientHandler(options ?? throw new ArgumentNullException(nameof(options)), _logger);
+		var resolvedLogger = logger ?? NullLogger.Instance;
+		_httpClientHandler = new AuthenticatedBackingOffHttpClientHandler(options ?? throw new ArgumentNullException(nameof(options)), resolvedLogger);
 		_httpClient = new HttpClient(_httpClientHandler) { BaseAddress = new Uri("https://api.mapbox.com/") };
 
 		var refitSettings = new RefitSettings

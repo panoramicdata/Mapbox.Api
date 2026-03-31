@@ -3,20 +3,16 @@
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<LangVersion>latest</LangVersion>
-		<Nullable>enable</Nullable>
 		<PackageIcon>Icon.png</PackageIcon>
-		<Copyright>Panoramic Data Limited 2021</Copyright>
 		<PackageProjectUrl>https://github.com/panoramicdata/Mapbox.Api</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/panoramicdata/Mapbox.Api</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
-		<PackageTags>Meraki API</PackageTags>
+		<PackageTags>Mapbox API</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Description>Meraki API</Description>
+		<Description>Mapbox API</Description>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<PackageReleaseNotes>Dependency updates.</PackageReleaseNotes>
-		<Authors>Panoramic Data Limited</Authors>
-		<Company>Panoramic Data Limited</Company>
 		<NeutralLanguage>en</NeutralLanguage>
 	</PropertyGroup>
 
@@ -25,23 +21,23 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="4.14.0">
+		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="10.0.101">
+		<PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers">
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.1" />
-		<PackageReference Include="Nerdbank.GitVersioning" Version="3.9.50">
+		<PackageReference Include="Microsoft.Extensions.Logging" />
+		<PackageReference Include="Nerdbank.GitVersioning">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
-		<PackageReference Include="refit" Version="9.0.2" />
-		<PackageReference Include="Refit.Newtonsoft.Json" Version="9.0.2" />
-		<PackageReference Include="SecurityCodeScan.VS2019" Version="5.6.7">
+		<PackageReference Include="Newtonsoft.Json" />
+		<PackageReference Include="refit" />
+		<PackageReference Include="Refit.Newtonsoft.Json" />
+		<PackageReference Include="SecurityCodeScan.VS2019">
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
