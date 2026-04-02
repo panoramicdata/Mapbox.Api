@@ -4,7 +4,7 @@ using Neovolve.Logging.Xunit;
 using Newtonsoft.Json;
 using System;
 using System.IO;
-using Xunit.Abstractions;
+using Xunit;
 
 namespace Mapbox.Api.Test;
 

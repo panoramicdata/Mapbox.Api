@@ -43,8 +43,8 @@ if ($existingTag) {
     exit 1
 }
 
-Write-Host "Tagging as $version ..." -ForegroundColor Cyan
+Write-Information "Tagging as $version ..."
 git tag $version
 git push origin $version
 
-Write-Host "✅ Published tag $version — CI will build and push to NuGet." -ForegroundColor Green
+Write-Information "Published tag $version - CI will build and push to NuGet."

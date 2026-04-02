@@ -2,7 +2,6 @@ using AwesomeAssertions;
 using Mapbox.Api.Data;
 using System.Threading.Tasks;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace Mapbox.Api.Test;
 
@@ -13,7 +12,7 @@ public class GeocodingTests(ITestOutputHelper iTestOutputHelper) : MapboxClientT
 	{
 		var geocoding = await MapboxClient
 			.Geocoding
-			.GetForwardsAsync("Greenwich Observatory, Greenwich, London");
+			.GetForwardsAsync("Greenwich Observatory, Greenwich, London", TestContext.Current.CancellationToken);
 		geocoding.Should().BeOfType<Geocoding>();
 		geocoding.Should().NotBeNull();
 	}
