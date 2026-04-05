@@ -1,61 +1,62 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
-	<PropertyGroup>
-		<TargetFramework>netstandard2.0</TargetFramework>
-		<LangVersion>latest</LangVersion>
-		<PackageIcon>Icon.png</PackageIcon>
-		<PackageProjectUrl>https://github.com/panoramicdata/Mapbox.Api</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/panoramicdata/Mapbox.Api</RepositoryUrl>
-		<RepositoryType>git</RepositoryType>
-		<PackageTags>Mapbox API</PackageTags>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Description>Mapbox API</Description>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-		<PackageReleaseNotes>Dependency updates.</PackageReleaseNotes>
-		<NeutralLanguage>en</NeutralLanguage>
-	</PropertyGroup>
-
-	<ItemGroup>
-		<None Include="Icon.png" Pack="true" PackagePath="" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers">
-			<PrivateAssets>all</PrivateAssets>
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		</PackageReference>
-		<PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers">
-		  <PrivateAssets>all</PrivateAssets>
-		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		</PackageReference>
-		<PackageReference Include="Microsoft.Extensions.Logging" />
-		<PackageReference Include="Nerdbank.GitVersioning">
-			<PrivateAssets>all</PrivateAssets>
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		</PackageReference>
-		<PackageReference Include="Newtonsoft.Json" />
-		<PackageReference Include="refit" />
-		<PackageReference Include="Refit.Newtonsoft.Json" />
-		<PackageReference Include="SecurityCodeScan.VS2019">
-		  <PrivateAssets>all</PrivateAssets>
-		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		</PackageReference>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Compile Update="Resources.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Resources.resx</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <EmbeddedResource Update="Resources.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
-	</ItemGroup>
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <PackageIcon>Icon.png</PackageIcon>
+    <PackageProjectUrl>https://github.com/panoramicdata/Mapbox.Api</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/panoramicdata/Mapbox.Api</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Mapbox API</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Description>Mapbox API</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>Dependency updates.</PackageReleaseNotes>
+    <NeutralLanguage>en</NeutralLanguage>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PackageId>Mapbox.Api</PackageId>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <NeutralResourcesLanguage>en</NeutralResourcesLanguage>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Icon.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging" />
+    <PackageReference Include="Nerdbank.GitVersioning">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" />
+    <PackageReference Include="refit" />
+    <PackageReference Include="Refit.Newtonsoft.Json" />
+    <PackageReference Include="SecurityCodeScan.VS2019">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>
