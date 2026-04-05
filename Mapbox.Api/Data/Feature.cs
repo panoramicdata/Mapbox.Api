@@ -1,50 +1,94 @@
 ﻿using System.Collections.Generic;
-using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace Mapbox.Api.Data;
 
-[DataContract]
+/// <summary>
+/// A geocoding feature result.
+/// </summary>
 public class Feature
 {
-	[DataMember(Name = "id")]
+	/// <summary>
+	/// The feature identifier.
+	/// </summary>
+	[JsonPropertyName("id")]
 	public string Id { get; set; } = null!;
 
-	[DataMember(Name = "type")]
+	/// <summary>
+	/// The GeoJSON type.
+	/// </summary>
+	[JsonPropertyName("type")]
 	public string Type { get; set; } = null!;
 
-	[DataMember(Name = "place_type")]
+	/// <summary>
+	/// The place type(s).
+	/// </summary>
+	[JsonPropertyName("place_type")]
 	public IList<string> PlaceType { get; set; } = null!;
 
-	[DataMember(Name = "relevance")]
+	/// <summary>
+	/// The relevance score.
+	/// </summary>
+	[JsonPropertyName("relevance")]
 	public double Relevance { get; set; }
 
-	[DataMember(Name = "properties")]
+	/// <summary>
+	/// The feature properties.
+	/// </summary>
+	[JsonPropertyName("properties")]
 	public Properties Properties { get; set; } = null!;
 
-	[DataMember(Name = "text")]
+	/// <summary>
+	/// The feature text.
+	/// </summary>
+	[JsonPropertyName("text")]
 	public string Text { get; set; } = null!;
 
-	[DataMember(Name = "place_name")]
+	/// <summary>
+	/// The full place name.
+	/// </summary>
+	[JsonPropertyName("place_name")]
 	public string PlaceName { get; set; } = null!;
 
-	[DataMember(Name = "matching_text")]
+	/// <summary>
+	/// The matching text.
+	/// </summary>
+	[JsonPropertyName("matching_text")]
 	public string MatchingText { get; set; } = null!;
 
-	[DataMember(Name = "matching_place_name")]
+	/// <summary>
+	/// The matching place name.
+	/// </summary>
+	[JsonPropertyName("matching_place_name")]
 	public string MatchingPlaceName { get; set; } = null!;
 
-	[DataMember(Name = "center")]
+	/// <summary>
+	/// The center coordinates.
+	/// </summary>
+	[JsonPropertyName("center")]
 	public IList<double> Center { get; set; } = null!;
 
-	[DataMember(Name = "geometry")]
+	/// <summary>
+	/// The feature geometry.
+	/// </summary>
+	[JsonPropertyName("geometry")]
 	public Geometry Geometry { get; set; } = null!;
 
-	[DataMember(Name = "address")]
+	/// <summary>
+	/// The address.
+	/// </summary>
+	[JsonPropertyName("address")]
 	public string Address { get; set; } = null!;
 
-	[DataMember(Name = "context")]
+	/// <summary>
+	/// The context hierarchy.
+	/// </summary>
+	[JsonPropertyName("context")]
 	public IList<Context> Context { get; set; } = null!;
 
-	[DataMember(Name = "bbox")]
+	/// <summary>
+	/// The bounding box.
+	/// </summary>
+	[JsonPropertyName("bbox")]
 	public IList<double> Bbox { get; set; } = null!;
 }

@@ -24,6 +24,9 @@ public class MapboxClientOptions
 	/// </summary>
 	public int MaxAttemptCount { get; set; } = 5;
 
+	/// <summary>
+	/// Validates the options.
+	/// </summary>
 	public void Validate()
 	{
 		// AccessToken

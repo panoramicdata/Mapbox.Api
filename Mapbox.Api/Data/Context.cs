@@ -1,20 +1,33 @@
-﻿using System.Collections.Generic;
-using System.Runtime.Serialization;
+﻿using System.Text.Json.Serialization;
 
 namespace Mapbox.Api.Data;
 
-[DataContract]
+/// <summary>
+/// A context element providing hierarchy information for a geocoding result.
+/// </summary>
 public class Context
 {
-	[DataMember(Name = "id")]
+	/// <summary>
+	/// The context identifier.
+	/// </summary>
+	[JsonPropertyName("id")]
 	public string Id { get; set; } = null!;
 
-	[DataMember(Name = "text")]
+	/// <summary>
+	/// The context text.
+	/// </summary>
+	[JsonPropertyName("text")]
 	public string Text { get; set; } = null!;
 
-	[DataMember(Name = "wikidata")]
+	/// <summary>
+	/// The Wikidata identifier.
+	/// </summary>
+	[JsonPropertyName("wikidata")]
 	public string Wikidata { get; set; } = null!;
 
-	[DataMember(Name = "short_code")]
+	/// <summary>
+	/// The short code (e.g. region or country code).
+	/// </summary>
+	[JsonPropertyName("short_code")]
 	public string ShortCode { get; set; } = null!;
 }

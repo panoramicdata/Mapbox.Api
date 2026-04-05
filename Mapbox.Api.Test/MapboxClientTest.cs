@@ -1,9 +1,9 @@
 ﻿using Mapbox.Api.Exceptions;
 using Mapbox.Api.Test.Config;
 using Neovolve.Logging.Xunit;
-using Newtonsoft.Json;
 using System;
 using System.IO;
+using System.Text.Json;
 using Xunit;
 
 namespace Mapbox.Api.Test;
@@ -36,7 +36,7 @@ public class MapboxClientTest(ITestOutputHelper iTestOutputHelper)
 		// Yes
 
 		// Load in the config
-		_configuration = JsonConvert.DeserializeObject<Configuration>(File.ReadAllText(fileInfo.FullName))
+		_configuration = JsonSerializer.Deserialize<Configuration>(File.ReadAllText(fileInfo.FullName))
 			?? throw new FormatException("Invalid configuration format.");
 
 		_configuration.Validate();

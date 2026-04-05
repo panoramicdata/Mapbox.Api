@@ -1,10 +1,11 @@
 ﻿using Mapbox.Api.Interfaces;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
-using Newtonsoft.Json;
 using Refit;
 using System;
 using System.Net.Http;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Mapbox.Api;
 
@@ -17,13 +18,16 @@ public class MapboxClient : IDisposable
 	private readonly AuthenticatedBackingOffHttpClientHandler _httpClientHandler;
 
 	/// <summary>
-	/// A Meraki portal client
+	/// Initializes a new instance of the <see cref="MapboxClient"/> class.
 	/// </summary>
-	/// <param name="options"></param>
-	/// <param name="logger"></param>
-
+	/// <param name="options">The client options.</param>
 	public MapboxClient(MapboxClientOptions options) : this(options, default) { }
 
+	/// <summary>
+	/// Initializes a new instance of the <see cref="MapboxClient"/> class.
+	/// </summary>
+	/// <param name="options">The client options.</param>
+	/// <param name="logger">The logger.</param>
 	public MapboxClient(MapboxClientOptions options, ILogger? logger)
 	{
 		var resolvedLogger = logger ?? NullLogger.Instance;
@@ -32,10 +36,10 @@ public class MapboxClient : IDisposable
 
 		var refitSettings = new RefitSettings
 		{
-			ContentSerializer = new NewtonsoftJsonContentSerializer(
-			new JsonSerializerSettings
+			ContentSerializer = new SystemTextJsonContentSerializer(
+			new JsonSerializerOptions
 			{
-				NullValueHandling = NullValueHandling.Ignore
+				DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
 			})
 		};
 
@@ -50,6 +54,10 @@ public class MapboxClient : IDisposable
 	#region IDisposable Support
 	private bool _disposedValue;
 
+	/// <summary>
+	/// Releases unmanaged and optionally managed resources.
+	/// </summary>
+	/// <param name="disposing">Whether to release managed resources.</param>
 	protected virtual void Dispose(bool disposing)
 	{
 		if (!_disposedValue)
@@ -65,6 +73,7 @@ public class MapboxClient : IDisposable
 	}
 
 	// This code added to correctly implement the disposable pattern.
+	/// <inheritdoc />
 	public void Dispose()
 	{
 		// Do not change this code. Put cleanup code in Dispose(bool disposing) above.

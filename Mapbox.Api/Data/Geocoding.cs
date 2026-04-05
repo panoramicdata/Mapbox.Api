@@ -1,20 +1,34 @@
 ﻿using System.Collections.Generic;
-using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace Mapbox.Api.Data;
 
-[DataContract]
+/// <summary>
+/// A geocoding response from the Mapbox API.
+/// </summary>
 public class Geocoding
 {
-	[DataMember(Name = "type")]
+	/// <summary>
+	/// The GeoJSON type.
+	/// </summary>
+	[JsonPropertyName("type")]
 	public string Type { get; set; } = null!;
 
-	[DataMember(Name = "query")]
+	/// <summary>
+	/// The query terms.
+	/// </summary>
+	[JsonPropertyName("query")]
 	public IList<string> Query { get; set; } = null!;
 
-	[DataMember(Name = "features")]
+	/// <summary>
+	/// The returned features.
+	/// </summary>
+	[JsonPropertyName("features")]
 	public IList<Feature> Features { get; set; } = null!;
 
-	[DataMember(Name = "attribution")]
+	/// <summary>
+	/// The attribution string.
+	/// </summary>
+	[JsonPropertyName("attribution")]
 	public string Attribution { get; set; } = null!;
 }

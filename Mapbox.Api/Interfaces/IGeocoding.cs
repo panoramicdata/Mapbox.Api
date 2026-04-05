@@ -14,6 +14,7 @@ public interface IGeocoding
 	/// Gets forward geocoding.
 	/// </summary>
 	/// <param name="location">The location to look up</param>
+	/// <param name="cancellationToken">The cancellation token.</param>
 	/// <returns>Task of Object</returns>
 	[Get("/geocoding/v5/mapbox.places/{location}.json")]
 	Task<Geocoding> GetForwardsAsync(

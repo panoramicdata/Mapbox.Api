@@ -1,11 +1,15 @@
-﻿using System.Collections.Generic;
-using System.Runtime.Serialization;
+﻿using System.Text.Json.Serialization;
 
 namespace Mapbox.Api.Data;
 
-[DataContract]
+/// <summary>
+/// Properties associated with a geocoding feature.
+/// </summary>
 public class Properties
 {
-	[DataMember(Name = "accuracy")]
+	/// <summary>
+	/// The accuracy of the geocoding result.
+	/// </summary>
+	[JsonPropertyName("accuracy")]
 	public string Accuracy { get; set; } = null!;
 }
