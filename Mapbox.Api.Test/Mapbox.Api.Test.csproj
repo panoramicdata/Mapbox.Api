@@ -2,6 +2,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
+    <!-- Run on Microsoft.Testing.Platform so Microsoft.Testing.Extensions.CodeCoverage can collect
+         coverage through the test executable's own coverage switch, as the CI coverage job does. -->
+    <UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
+    <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
     <LangVersion>latest</LangVersion>
     <OutputType>Exe</OutputType>
     <IsPackable>false</IsPackable>
