@@ -5,6 +5,8 @@
 [![Nuget](https://img.shields.io/nuget/v/Mapbox.Api)](https://www.nuget.org/packages/Mapbox.Api/)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/d3b9e33de5f2461cabe69723352223ed)](https://app.codacy.com/gh/panoramicdata/Mapbox.Api/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
+> **Need help with APIs or .NET?** Panoramic Data are experts in APIs and .NET, and we can help with your development. [Contact us](https://www.panoramicdata.com/contact-us) or see our [software services](https://www.panoramicdata.com/services/software).
+
 Supports .NET 11.0.
 
 To use the Mapbox API nuget package:
